@@ -69,8 +69,8 @@ T2 | datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 ## database engines
 
-1. MySQL
-2. MSSql
-3. PostgreSQL
-4. Oracle®
-5. SQLite
+1. [x] MySQL
+2. [ ] MSSql
+3. [ ] PostgreSQL
+4. [ ] Oracle®
+5. [ ] SQLite
