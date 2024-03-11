@@ -15,6 +15,7 @@ name
 password s
 avatar s1024
 
+balance m
 version N
 status 1
 
@@ -30,6 +31,7 @@ CREATE TABLE (
   password varchar(255),
   avatar varchar(1024),
 
+  balance decimal(16, 2),
   version bigint,
   status int(1),
 
