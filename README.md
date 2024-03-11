@@ -18,8 +18,8 @@ avatar s1024
 version N
 status 1
 
-create_at t
-update_at t
+create_at t1
+update_at t2
 ```
 
 ```mysql
@@ -33,8 +33,8 @@ CREATE TABLE (
   version bigint,
   status int(1),
 
-  create_at datetime,
-  update_at datetime
+  create_at datetime DEFAULT CURRENT_TIMESTAMP,
+  update_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )
 ```
 
