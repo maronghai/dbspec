@@ -42,7 +42,7 @@ CREATE TABLE (
 
 ## NUMBER
 
-| mark | type |
+mark | type
 -|-
 n | int
 N | bigint
@@ -53,12 +53,19 @@ M | decimal(20, 6)
 
 ## STRING
 
-| mark | type |
+mark | type
 -|-
 | | varchar(255)
 s\d+ | varchar(\d+)
 S | text
 
+## DATETIME
+
+mark | type 
+-|-
+t | datetime
+t1 | datetime DEFAULT CURRENT_TIMESTAMP
+T2 | datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 ## database engines
 
