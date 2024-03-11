@@ -12,8 +12,8 @@ Design Database Schema Without Writing SQL
 id n ++
 
 name
-password s
-avatar s1024
+password s100
+avatar s
 
 balance m
 version N
@@ -28,8 +28,8 @@ CREATE TABLE (
   id int AUTO_INCREMENT PRIMARY KEY,
 
   name varchar(255),
-  password varchar(255),
-  avatar varchar(1024),
+  password varchar(100),
+  avatar text,
 
   balance decimal(16, 2),
   version bigint,
