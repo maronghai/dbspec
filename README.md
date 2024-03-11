@@ -40,7 +40,7 @@ CREATE TABLE (
 )
 ```
 
-## number
+## NUMBER
 
 | mark | type |
 -|-
@@ -50,6 +50,15 @@ N | bigint
 \d*\.\d+ | decimal(\d+, \d+)
 m | decimal(16, 2)
 M | decimal(20, 6)
+
+## STRING
+
+| mark | type |
+-|-
+| | varchar(255)
+s\d+ | varchar(\d+)
+S | text
+
 
 ## database engines
 
