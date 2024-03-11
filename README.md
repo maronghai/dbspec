@@ -38,6 +38,17 @@ CREATE TABLE (
 )
 ```
 
+## number
+
+| mark | type |
+-|-
+n | int
+N | bigint
+\d+ | int(\d+)
+\d*\.\d+ | decimal(\d+, \d+)
+m | decimal(16, 2)
+M | decimal(20, 6)
+
 ## database engines
 
 1. MySQL
