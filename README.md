@@ -86,6 +86,12 @@ mark | type
 -|-
 ^ | DEFAULT
 
+## COMMENT
+
+mark | type
+-|-
+`/` | comment
+
 ## database engines
 
 1. [x] MySQL
