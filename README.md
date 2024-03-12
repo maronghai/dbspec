@@ -93,3 +93,10 @@ mark | type
 3. [ ] PostgreSQL
 4. [ ] Oracle®
 5. [ ] SQLite
+
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2013-present, Ronghai Ma
