@@ -44,14 +44,14 @@ CREATE TABLE user (
 
 ## TABLE
 
-mark | type
+mark | MySQL
 -|-
 `#` | table name
 
 
 ## NUMBER
 
-mark | type
+mark | MySQL
 -|-
 n | int
 N | bigint
@@ -62,7 +62,7 @@ M | decimal(20, 6)
 
 ## STRING
 
-mark | type
+mark | MySQL
 -|-
 | | varchar(255)
 s\d+ | varchar(\d+)
@@ -70,7 +70,7 @@ S | text
 
 ## DATETIME
 
-mark | type 
+mark | MySQL 
 -|-
 t | datetime
 t1 | datetime DEFAULT CURRENT_TIMESTAMP
@@ -78,19 +78,19 @@ t2 | datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 ## PLUS PLUS
 
-mark | type
+mark | MySQL
 -|-
 ++ | AUTO_INCREMENT PRIMARY KEY
 
 ## DEFAULT
 
-mark | type
+mark | MySQL
 -|-
 ^ | DEFAULT
 
 ## COMMENT
 
-mark | type
+mark | MySQL
 -|-
 `//` | comment
 
