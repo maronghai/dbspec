@@ -1,4 +1,4 @@
-# MarkDB
+# MarkDB-SPEC
 
 Database Schema Design and Modeling Tool
 
