@@ -24,7 +24,7 @@ update_at t2
 ```
 
 ```mysql
-CREATE TABLE (
+CREATE TABLE user (
   id int AUTO_INCREMENT PRIMARY KEY,
 
   name varchar(255),
