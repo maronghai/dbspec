@@ -67,6 +67,12 @@ t | datetime
 t1 | datetime DEFAULT CURRENT_TIMESTAMP
 T2 | datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
+## PLUS PLUS
+
+mark | type
+-|-
+++ | AUTO_INCREMENT PRIMARY KEY
+
 ## database engines
 
 1. [x] MySQL
