@@ -17,7 +17,7 @@ avatar s
 
 balance m
 version N
-status 1
+status 1 ^0
 
 create_at t1
 update_at t2
@@ -33,7 +33,7 @@ CREATE TABLE user (
 
   balance decimal(16, 2),
   version bigint,
-  status int(1),
+  status int(1) DEFAULT 0,
 
   create_at datetime DEFAULT CURRENT_TIMESTAMP,
   update_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -72,6 +72,12 @@ t2 | datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 mark | type
 -|-
 ++ | AUTO_INCREMENT PRIMARY KEY
+
+## DEFAULT
+
+mark | type
+-|-
+^ | DEFAULT
 
 ## database engines
 
