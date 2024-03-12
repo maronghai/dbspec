@@ -36,8 +36,10 @@ CREATE TABLE user (
   version bigint DEFAULT 0,
   status int(1) DEFAULT 0 COMMENT '[0,1]',
 
+  delete_at datetime
   create_at datetime DEFAULT CURRENT_TIMESTAMP,
   update_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
   COMMENT = 'TABLE OF USER'
 )
 ```
