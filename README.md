@@ -99,7 +99,7 @@ mark | MySQL
 ## database engines
 
 1. [x] MySQL
-2. [ ] MSSql
+2. [ ] MSSQL
 3. [ ] PostgreSQL
 4. [ ] Oracle®
 5. [ ] SQLite
