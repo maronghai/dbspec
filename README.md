@@ -40,6 +40,13 @@ CREATE TABLE user (
 )
 ```
 
+## TABLE
+
+mark | type
+-|-
+`#` | table name
+
+
 ## NUMBER
 
 mark | type
