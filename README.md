@@ -1,4 +1,4 @@
-# DB-SPEC
+# DB SPEC
 
 Database Schema Design and Modeling Tool
 
