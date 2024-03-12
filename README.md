@@ -32,7 +32,7 @@ CREATE TABLE user (
   avatar text,
 
   balance decimal(16, 2),
-  version bigint,
+  version bigint DEFAULT 0,
   status int(1) DEFAULT 0,
 
   create_at datetime DEFAULT CURRENT_TIMESTAMP,
