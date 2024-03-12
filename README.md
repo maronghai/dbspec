@@ -7,7 +7,7 @@ Design Database Schema Without Writing SQL
 ## hello world
 
 ```
-# user
+# user // TABLE OF USER
 
 id n ++
 
@@ -17,7 +17,7 @@ avatar s
 
 balance m
 version N ^ 0
-status 1 ^0
+status 1 ^0 // [0,1]
 
 create_at t1
 update_at t2
@@ -33,10 +33,11 @@ CREATE TABLE user (
 
   balance decimal(16, 2),
   version bigint DEFAULT 0,
-  status int(1) DEFAULT 0,
+  status int(1) DEFAULT 0 COMMENT '[0,1]',
 
   create_at datetime DEFAULT CURRENT_TIMESTAMP,
-  update_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  update_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  COMMENT = 'TABLE OF USER'
 )
 ```
 
@@ -90,7 +91,7 @@ mark | type
 
 mark | type
 -|-
-`/` | comment
+`//` | comment
 
 ## database engines
 
@@ -105,4 +106,4 @@ mark | type
 
 [MIT](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2013-present, Ronghai Ma
+Copyright (c) 2023-present, Ronghai Ma
