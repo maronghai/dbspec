@@ -16,7 +16,7 @@ password s100
 avatar s
 
 balance m
-version N
+version N ^ 0
 status 1 ^0
 
 create_at t1
