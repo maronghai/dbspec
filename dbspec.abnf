@@ -4,33 +4,44 @@ table_definition = table_header *field_definition
 
 ; table header
 
-table_header = "#" SP table_name [SP comment] CRLF
+table_header = table_start SP table_name [SP comment] EOL
+table_start  = %x23 ; "#"
 table_name   = identifier
 
 ; field_definition
 
-field_definition    = field_name [SP field_type] [SP auto_increment] [SP default_value] [SP comment] CRLF
+field_definition    = field_name [SP field_type] [SP auto_increment] [SP default_value] [SP comment] EOL
 field_name          = identifier
-field_type          = field_type_number / field_type_string / field_type_datetiem
-field_type_number   = 1*2(DIGIT) / 1*2(DIGIT) "." 2*6(DIGIT) / "n" / "N" / "m" / "M"
-field_type_string   = ["s" *(DIGIT)]
-field_type_datetime = "t" / "t1" / "t2"
-auto_increment      = "++"
-default_value       = "^" value
-field_comment       = "//" *(comment_char)
+field_type          = field_type_number / field_type_string / field_type_datetime
+field_type_number   = 1*2DIGIT / 1*2DIGIT %x2E 2*6DIGIT / %x6E / %x4E / %x6D / %x4D ; [0-9]{1,2} / [0-9]{1,2}.[0-9]{2,6} / n / N / m / M
+field_type_string   = [%x73 *DIGIT] ; (s[0-9]*)?
+field_type_datetime = %x74 [  %x31 / %x32 ]
+auto_increment      = 2*2%x2B
+default_value       = %x5E SP *VCHAR ; "^"
 
 ; common definition
 
-identifier   = ALPHA *(ALPHA / DIGIT / "_") ; Starts with a letter, followed by letters, digits, or underscores
-value        = *(%x20-7E) ; Any visible character,                  excluding newline (this is a very simplified definition)
-comment      = "//" *(comment_char)
-comment_char = %x09 / %x20-7E ; Any visible character or tab,       excluding newline
+identifier   = ALPHA_ *ICHAR ;
+comment      = 2*2%x2F *comment_char
+comment_char = WHITESPACE / VCHAR ; Any visible character or tab, excluding newline
 
 ; base definition
 
-SP    = %x20
-ALPHA = %x41-5A / %x61-7A
-DIGIT = %x30-39
-CR    = %x0D
-LF    = %x0A
-CRLF  = CR LF
+;; whitespace
+
+WHITESPACE = %x20 / %x09
+SP         = *WHITESPACE
+
+;; new line
+
+EOL = [%x0D] %x0A
+
+;; ALPHA DIGIT _ and CHAR
+
+ALPHA  = %x41-5A / %x61-7A
+DIGIT  = %x30-39
+_      = %x5F
+ALPHA_ = ALPHA / _
+ICHAR  = ALPHA / DIGIT / _
+VCHAR  = %x20-7E
+
