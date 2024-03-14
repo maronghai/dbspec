@@ -1,1 +1,36 @@
+; table
 
+table_definition = table_header *field_definition
+
+; table header
+
+table_header = "#" SP table_name [SP comment] CRLF
+table_name   = identifier
+
+; field_definition
+
+field_definition    = field_name [SP field_type] [SP auto_increment] [SP default_value] [SP comment] CRLF
+field_name          = identifier
+field_type          = field_type_number / field_type_string / field_type_datetiem
+field_type_number   = 1*2(DIGIT) / 1*2(DIGIT) "." 2*6(DIGIT) / "n" / "N" / "m" / "M"
+field_type_string   = ["s" *(DIGIT)]
+field_type_datetime = "t" / "t1" / "t2"
+auto_increment      = "++"
+default_value       = "^" value
+field_comment       = "//" *(comment_char)
+
+; common definition
+
+identifier   = ALPHA *(ALPHA / DIGIT / "_") ; Starts with a letter, followed by letters, digits, or underscores
+value        = *(%x20-7E) ; Any visible character,                  excluding newline (this is a very simplified definition)
+comment      = "//" *(comment_char)
+comment_char = %x09 / %x20-7E ; Any visible character or tab,       excluding newline
+
+; base definition
+
+SP    = %x20
+ALPHA = %x41-5A / %x61-7A
+DIGIT = %x30-39
+CR    = %x0D
+LF    = %x0A
+CRLF  = CR LF
