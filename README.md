@@ -6,7 +6,7 @@ Design Database Schema Without Writing SQL
 
 ## hello world
 
-```markdown
+```
 # user // TABLE OF USER
 
 id n ! ++
@@ -24,19 +24,19 @@ create_at t1
 update_at t+
 ```
 
-```mysql
+```sql
 CREATE TABLE user (
   id int AUTO_INCREMENT PRIMARY KEY,
 
-  name varchar(255),
+  name     varchar(255),
   password varchar(100),
-  avatar text,
+  avatar   text,
 
   balance decimal(16, 2),
   version bigint DEFAULT 0,
-  status int(1) DEFAULT 0 COMMENT '[0,1]',
+  status  int(1) DEFAULT 0 COMMENT '[0,1]',
 
-  delete_at datetime
+  delete_at datetime,
   create_at datetime DEFAULT CURRENT_TIMESTAMP,
   update_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
@@ -52,7 +52,7 @@ mark | MySQL
 
 user.dbs
 
-```markdown
+```
 # user
 ```
 
@@ -73,6 +73,33 @@ mark | MySQL
 `\d*\,\d+` | decimal(\d+, \d+)
 `m` | decimal(16, 2)
 `M` | decimal(20, 6)
+
+user.sql
+
+```
+# user
+
+id n
+version N
+status 1
+
+balance m
+balance6 M
+balancex 16,6
+```
+
+
+```sql
+CREATE TABLE user (
+  id      int,
+  version bigint,
+  status  int(1),
+
+  balance  decimal(16, 2),
+  balance6 decimal(20,6),
+  balancex decimal(16, 6)
+)
+```
 
 ## STRING
 
