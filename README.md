@@ -21,7 +21,7 @@ status 1 ^0 // [0,1]
 
 delete_at t
 create_at t1
-update_at t2
+update_at t+
 ```
 
 ```mysql
@@ -76,7 +76,7 @@ mark | MySQL
 -|-
 `t` | datetime
 `t1` | datetime DEFAULT CURRENT_TIMESTAMP
-`t2` | datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+`t+` | datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 ## PLUS PLUS
 
