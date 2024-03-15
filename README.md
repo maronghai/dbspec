@@ -74,7 +74,7 @@ mark | MySQL
 `m` | decimal(16, 2)
 `M` | decimal(20, 6)
 
-user.sql
+user.dbs
 
 ```
 # user
@@ -88,6 +88,7 @@ balance6 M
 balancex 16,6
 ```
 
+user.sql
 
 ```sql
 CREATE TABLE user (
