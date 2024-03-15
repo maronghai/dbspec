@@ -97,7 +97,7 @@ CREATE TABLE user (
   status  int(1),
 
   balance  decimal(16, 2),
-  balance6 decimal(20,6),
+  balance6 decimal(20, 6),
   balancex decimal(16, 6)
 )
 ```
