@@ -55,40 +55,40 @@ mark | MySQL
 
 mark | MySQL
 -|-
-n | int
-N | bigint
-\d+ | int(\d+)
-\d*\.\d+ | decimal(\d+, \d+)
-m | decimal(16, 2)
-M | decimal(20, 6)
+`n` | int
+`N` | bigint
+`\d+` | int(\d+)
+`\d*\,\d+` | decimal(\d+, \d+)
+`m` | decimal(16, 2)
+`M` | decimal(20, 6)
 
 ## STRING
 
 mark | MySQL
 -|-
 | | varchar(255)
-s\d+ | varchar(\d+)
-S | text
+`s\d+` | varchar(\d+)
+`S` | text
 
 ## DATETIME
 
 mark | MySQL 
 -|-
-t | datetime
-t1 | datetime DEFAULT CURRENT_TIMESTAMP
-t2 | datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+`t` | datetime
+`t1` | datetime DEFAULT CURRENT_TIMESTAMP
+`t2` | datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 ## PLUS PLUS
 
 mark | MySQL
 -|-
-++ | AUTO_INCREMENT PRIMARY KEY
+`++` | AUTO_INCREMENT PRIMARY KEY
 
 ## DEFAULT
 
 mark | MySQL
 -|-
-^ | DEFAULT
+`^` | DEFAULT
 
 ## COMMENT
 
