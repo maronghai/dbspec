@@ -6,7 +6,7 @@ Design Database Schema Without Writing SQL
 
 ## hello world
 
-```
+```markdown
 # user // TABLE OF USER
 
 id n ! ++
@@ -50,6 +50,18 @@ mark | MySQL
 -|-
 `#` | table name
 
+user.dbs
+
+```markdown
+# user
+```
+
+user.sql
+
+```sql
+CREATE TABLE user (
+)
+```
 
 ## NUMBER
 
