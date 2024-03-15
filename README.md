@@ -29,20 +29,20 @@ update_at t+
 user.sql
 
 ```sql
-CREATE TABLE user (
-  id int AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE `user` (
+  `id` int AUTO_INCREMENT PRIMARY KEY,
 
-  name     varchar(255),
-  password varchar(100),
-  avatar   text,
+  `name`     varchar(255),
+  `password` varchar(100),
+  `avatar`   text,
 
-  balance decimal(16, 2),
-  version bigint DEFAULT 0,
-  status  int(1) DEFAULT 0 COMMENT '[0,1]',
+  `balance` decimal(16, 2),
+  `version` bigint DEFAULT 0,
+  `status`  int(1) DEFAULT 0 COMMENT '[0,1]',
 
-  delete_at datetime,
-  create_at datetime DEFAULT CURRENT_TIMESTAMP,
-  update_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `delete_at` datetime,
+  `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
   COMMENT = 'TABLE OF USER'
 )
@@ -142,6 +142,27 @@ mark | MySQL
 `t` | datetime
 `t1` | datetime DEFAULT CURRENT_TIMESTAMP
 `t+` | datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+
+user.dbs
+
+```
+# user
+
+delete_at t
+create_at t1
+update_at t+
+
+```
+
+user.sql
+
+```sql
+CREATE TABLE `user` (
+  `delete_at` datetime,
+  `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+)
+```
 
 ## AUTO INCREMENT
 
