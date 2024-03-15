@@ -9,7 +9,7 @@ Design Database Schema Without Writing SQL
 ```
 # user // TABLE OF USER
 
-id n ++
+id n ! ++
 
 name
 password s100
@@ -78,11 +78,17 @@ mark | MySQL
 `t1` | datetime DEFAULT CURRENT_TIMESTAMP
 `t+` | datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
-## PLUS PLUS
+## AUTO INCREMENT
 
 mark | MySQL
 -|-
-`++` | AUTO_INCREMENT PRIMARY KEY
+`++` | AUTO_INCREMENT
+
+## PRIMARY KEY
+
+mark | MySQL
+-|-
+`!` | PRIMARY KEY
 
 ## DEFAULT
 
