@@ -6,6 +6,8 @@ Design Database Schema Without Writing SQL
 
 ## hello world
 
+user.dbs
+
 ```
 # user // TABLE OF USER
 
@@ -23,6 +25,8 @@ delete_at t
 create_at t1
 update_at t+
 ```
+
+user.sql
 
 ```sql
 CREATE TABLE user (
