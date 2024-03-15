@@ -13,7 +13,7 @@ id n ! ++
 
 name
 password s100
-avatar s
+avatar S
 
 balance m
 version N ^ 0
@@ -59,7 +59,7 @@ user.dbs
 user.sql
 
 ```sql
-CREATE TABLE user (
+CREATE TABLE `user` (
 )
 ```
 
@@ -91,14 +91,14 @@ balancex 16,6
 user.sql
 
 ```sql
-CREATE TABLE user (
-  id      int,
-  version bigint,
-  status  int(1),
+CREATE TABLE `user` (
+  `id`      int,
+  `version` bigint,
+  `status`  int(1),
 
-  balance  decimal(16, 2),
-  balance6 decimal(20, 6),
-  balancex decimal(16, 6)
+  `balance`  decimal(16, 2),
+  `balance6` decimal(20, 6),
+  `balancex` decimal(16, 6)
 )
 ```
 
@@ -109,6 +109,27 @@ mark | MySQL
 | | varchar(255)
 `s\d+` | varchar(\d+)
 `S` | text
+
+user.dbs
+
+```
+# user
+
+name
+password s100
+avatar S
+
+```
+
+user.sql
+
+```sql
+CREATE TABLE `user` (
+  `name`     varchar(255),
+  `password` varchar(100),
+  `avatar`   text
+)
+```
 
 ## DATETIME
 
