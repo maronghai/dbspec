@@ -17,11 +17,11 @@ id n ! ++
 
 name
 password s100
-avatar S
+avatar   S
 
 balance m
 version N ^ 0
-status 1 ^0 // [0,1]
+status  1 ^0 // [0,1]
 
 delete_at t
 create_at t1
