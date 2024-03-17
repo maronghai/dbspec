@@ -8,23 +8,21 @@ Design Database Schema Without Writing SQL
 
 user.dbs
 
-![helloworld.png](helloworld.png)
-
 ```
 # user // TABLE OF USER
 
-id n ! ++
+id n ++ !
 
 name
 password s100
 avatar   S
 
 balance m
-version N ^ 0
-status  1 ^0 // [0,1]
+version N =0
+status  1 =0 // [0,1]
 
 delete_at t
-create_at t1
+create_at t=
 update_at t+
 ```
 
@@ -32,15 +30,15 @@ user.sql
 
 ```sql
 CREATE TABLE `user` (
-  `id` int AUTO_INCREMENT PRIMARY KEY,
+  `id`        int AUTO_INCREMENT PRIMARY KEY,
 
-  `name`     varchar(255),
-  `password` varchar(100),
-  `avatar`   text,
+  `name`      varchar(255),
+  `password`  varchar(100),
+  `avatar`    text,
 
-  `balance` decimal(16, 2),
-  `version` bigint DEFAULT 0,
-  `status`  int(1) DEFAULT 0 COMMENT '[0,1]',
+  `balance`   decimal(16, 2),
+  `version`   bigint DEFAULT 0,
+  `status`    int(1) DEFAULT 0 COMMENT '[0,1]',
 
   `delete_at` datetime,
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
@@ -142,7 +140,7 @@ CREATE TABLE `user` (
 mark | MySQL 
 -|-
 `t` | datetime
-`t1` | datetime DEFAULT CURRENT_TIMESTAMP
+`t=` | datetime DEFAULT CURRENT_TIMESTAMP
 `t+` | datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 user.dbs
@@ -213,7 +211,7 @@ CREATE TABLE `user` (
 
 mark | MySQL
 -|-
-`^` | DEFAULT
+`=` | DEFAULT
 
 ## COMMENT
 
