@@ -83,11 +83,11 @@ user.dbs
 ```
 # user
 
-id n
+id      n
 version N
-status 1
+status  1
 
-balance m
+balance  m
 balance6 M
 balancex 16,6
 ```
@@ -96,9 +96,9 @@ user.sql
 
 ```sql
 CREATE TABLE `user` (
-  `id`      int,
-  `version` bigint,
-  `status`  int(1),
+  `id`       int,
+  `version`  bigint,
+  `status`   int(1),
 
   `balance`  decimal(16, 2),
   `balance6` decimal(20, 6),
@@ -149,7 +149,7 @@ user.dbs
 # user
 
 delete_at t
-create_at t1
+create_at t=
 update_at t+
 
 ```
