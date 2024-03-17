@@ -172,11 +172,42 @@ mark | MySQL
 -|-
 `++` | AUTO_INCREMENT
 
+user.dbs
+
+```
+# user
+id n ++
+```
+
+user.sql
+
+```sql
+CREATE TABLE `user` (
+  `id` int AUTO_INCREMENT
+)
+```
+
 ## PRIMARY KEY
 
 mark | MySQL
 -|-
 `!` | PRIMARY KEY
+
+
+user.dbs
+
+```
+# user
+id n !
+```
+
+user.sql
+
+```sql
+CREATE TABLE `user` (
+  `id` int PRIMARY KEY
+)
+```
 
 ## DEFAULT
 
