@@ -191,7 +191,6 @@ mark | MySQL
 -|-
 `!` | PRIMARY KEY
 
-
 user.dbs
 
 ```
@@ -213,11 +212,41 @@ mark | MySQL
 -|-
 `=` | DEFAULT
 
+user.dbs
+
+```
+# user
+status 1 =1
+```
+
+user.sql
+
+```sql
+CREATE TABLE `user` (
+  `status` int(1) DEFAULT 1
+)
+```
+
 ## COMMENT
 
 mark | MySQL
 -|-
 `//` | comment
+
+user.dbs
+
+```
+# user
+status 1 =1 // [0,1]
+```
+
+user.sql
+
+```sql
+CREATE TABLE `user` (
+  `status` int(1) DEFAULT 1 COMMENT '[0,1]'
+)
+```
 
 ## database engines
 
