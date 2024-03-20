@@ -231,12 +231,12 @@ CREATE TABLE `user` (
 
 mark | MySQL
 -|-
-`//` | comment
+`//`, `--` | comment
 
 user.dbs
 
 ```
-# user
+# user -- TABLE OF USER
 status 1 =1 // [0,1]
 ```
 
@@ -244,9 +244,68 @@ user.sql
 
 ```sql
 CREATE TABLE `user` (
-  `status` int(1) DEFAULT 1 COMMENT '[0,1]'
+  `status` int(1) DEFAULT 1 COMMENT '[0,1]',
+  COMMENT = 'TABLE OF USER'
 )
 ```
+
+## TEMPLATE
+
+mark | MySQL
+-|-
+`#?`  | template
+`...` | slot
+
+template.dbs
+
+```
+#?
+
+id n ++ !
+...
+version   N =0
+status    1 =0 // [0,1]
+
+delete_at t
+create_at t=
+update_at t+
+```
+
+user.dbs
+
+```
+# user // TABLE OF USER
+
+name
+password s100
+avatar   S
+
+balance  m
+```
+
+user.sql
+
+```sql
+CREATE TABLE `user` (
+  `id`        int AUTO_INCREMENT PRIMARY KEY,
+
+  `name`      varchar(255),
+  `password`  varchar(100),
+  `avatar`    text,
+
+  `balance`   decimal(16, 2),
+  `version`   bigint DEFAULT 0,
+  `status`    int(1) DEFAULT 0 COMMENT '[0,1]',
+
+  `delete_at` datetime,
+  `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+  COMMENT = 'TABLE OF USER'
+)
+```
+
+
 
 ## Ecosystem
 
