@@ -4,6 +4,13 @@ Database Schema Design and Modeling Tool
 
 Design Database Schema Without Writing SQL
 
+**Features:**
+
+1. Schema, Table
+2. Number, String, Datetime
+3. Auto Increment, Primary Key, Default, Comment
+4. Template
+
 ## hello world
 
 user.dbs
