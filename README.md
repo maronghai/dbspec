@@ -9,7 +9,7 @@ Design Database Schema Without Writing SQL
 user.dbs
 
 ```
-# user // TABLE OF USER
+# user // TABLE OF USER  ；define a `user` table with comment 'TABLE OF USER'
 
 id n ++ !
 
@@ -48,7 +48,25 @@ CREATE TABLE `user` (
 )
 ```
 
-## TABLE
+## Schema
+
+mark | MySQL
+-|-
+`$` | schema name
+
+demo.dbs
+
+```
+$ demo  ; /(?:^|\n)\$\s*\w+/
+```
+
+demo.sql
+
+```sql
+create DATABASE `demo`
+```
+
+## Table
 
 mark | MySQL
 -|-
@@ -253,8 +271,8 @@ CREATE TABLE `user` (
 
 mark | MySQL
 -|-
-`#?`  | template
-`...` | slot
+`#?`  | template name. default name is empty.
+`...` | slot. default slot is at the end of the template.
 
 template.dbs
 
@@ -262,13 +280,13 @@ template.dbs
 #?
 
 id n ++ !
-...
-version   N =0
-status    1 =0 // [0,1]
+...           ; Here is a slot
+version   N
+status    1
 
 delete_at t
 create_at t=
-update_at t+
+update_at t+  ;
 ```
 
 user.dbs
@@ -305,6 +323,28 @@ CREATE TABLE `user` (
 )
 ```
 
+### Named Template
+
+all.spec
+
+```
+#? 1
+
+id n ++ !
+
+#1 user  ; define a `user` table using template named `1`
+
+name
+```
+
+all.sql
+
+```sql
+CREATE TABLE `user` (
+  `id`   int AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(255)
+)
+```
 
 
 ## Ecosystem
