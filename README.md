@@ -256,13 +256,14 @@ CREATE TABLE `user` (
 
 mark | MySQL
 -|-
-`//`, `--` | comment
+`//`, `--` | SQL COMMENT
+`;` | spec comment
 
 user.dbs
 
 ```
-# user -- TABLE OF USER
-status 1 =1 // [0,1]
+# user -- TABLE OF USER  ; define a `user` table 
+status 1 =1 // [0,1]     ; define a `status` column, type is int(1), comment is '[0,1]'
 ```
 
 user.sql
