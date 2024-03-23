@@ -1,4 +1,4 @@
-# DB SPEC
+# DB Spec
 
 Database Schema Design and Modeling Tool
 
@@ -357,7 +357,7 @@ CREATE TABLE `user` (
 
 ## Ecosystem
 
-1. [DB CREATE](https://github.com/maronghai/dbcreate)
+1. [DB Create](https://github.com/maronghai/dbcreate)
 
 ## License
 
