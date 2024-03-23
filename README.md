@@ -357,7 +357,8 @@ CREATE TABLE `user` (
 
 ## Ecosystem
 
-1. [DB Create](https://github.com/maronghai/dbcreate)
+1. [Type Spec](https://github.com/maronghai/typespec)
+2. [DB Create](https://github.com/maronghai/dbcreate)
 
 ## License
 
