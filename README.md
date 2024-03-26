@@ -64,7 +64,7 @@ mark | MySQL
 demo.dbs
 
 ```
-$ demo  ; /(?:^|\n)\$\s*\w+/
+$ demo
 ```
 
 demo.sql
