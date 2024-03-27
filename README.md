@@ -189,11 +189,12 @@ CREATE TABLE `user` (
 )
 ```
 
-## AUTO INCREMENT
+## PLUS
 
 mark | MySQL
 -|-
-`++` | AUTO_INCREMENT
+`n` `+`, `N` `+`, `\d+` `+` | AUTO_INCREMENT
+`t` `+` | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 user.dbs
 
