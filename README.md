@@ -18,7 +18,7 @@ user.dbs
 ```
 # user // TABLE OF USER  ；define a `user` table with comment 'TABLE OF USER'
 
-id n + !
+id n++
 
 name
 password s100
@@ -288,7 +288,7 @@ template.dbs
 ```
 %
 
-id n ++ !
+id n++
 ...           ; Here is a slot
 version   N
 status    1
@@ -339,7 +339,7 @@ all.spec
 ```
 %1
 
-id n ++ !
+id n++
 
 #1 user  ; define a `user` table using template named `1`
 
