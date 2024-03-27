@@ -279,13 +279,13 @@ CREATE TABLE `user` (
 
 mark | MySQL
 -|-
-`#?`  | template name. default name is empty.
+`%`  | template name. default name is empty.
 `...` | slot. default slot is at the end of the template.
 
 template.dbs
 
 ```
-#?
+%
 
 id n ++ !
 ...           ; Here is a slot
@@ -336,7 +336,7 @@ CREATE TABLE `user` (
 all.spec
 
 ```
-#? 1
+%1
 
 id n ++ !
 
