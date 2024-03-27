@@ -16,7 +16,7 @@ Design Database Schema Without Writing SQL
 user.dbs
 
 ```
-# user // TABLE OF USER  ；define a `user` table with comment 'TABLE OF USER'
+# user // TABLE OF USER  ; define a `user` table with comment 'TABLE OF USER'
 
 id       n++  ; n++  <=> id n + !
 
