@@ -165,8 +165,6 @@ CREATE TABLE `user` (
 mark | MySQL 
 -|-
 `t` | datetime
-`t=` | datetime DEFAULT CURRENT_TIMESTAMP
-`t+` | datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 user.dbs
 
@@ -237,6 +235,7 @@ CREATE TABLE `user` (
 mark | MySQL
 -|-
 `=` | DEFAULT
+`t` `=` | DEFAULT CURRENT_TIMESTAMP
 
 user.dbs
 
