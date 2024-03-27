@@ -192,6 +192,7 @@ CREATE TABLE `user` (
 mark | MySQL
 -|-
 `n` `+`, `N` `+`, `\d+` `+` | AUTO_INCREMENT
+`++` | AUTO_INCREMENT PRIMARY KEY
 `t` `+` | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 user.dbs
@@ -205,7 +206,7 @@ user.sql
 
 ```sql
 CREATE TABLE `user` (
-  `id` int AUTO_INCREMENT
+  `id` int AUTO_INCREMENT PRIMARY KEY
 )
 ```
 
