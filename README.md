@@ -135,7 +135,7 @@ CREATE TABLE `user` (
 
 mark | MySQL
 -|-
-| | varchar(255)
+| | varchar
 `s\d+` | varchar(\d+)
 `S` | text
 
