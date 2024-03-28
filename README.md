@@ -18,7 +18,7 @@ user.dbs
 ```
 # user  // TABLE OF USER  -- define a `user` table with comment 'TABLE OF USER'
 
-id       n++   // id of user             -- n++  <=> id n + !
+id       n++   // id of user
 
 name           // name of user
 password s100  // password of user
