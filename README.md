@@ -66,17 +66,28 @@ CREATE TABLE `user` (
 
 ## Schema <a name="schema"></a>
 
-mark | MySQL
+Mark | MySQL
 -|-
 `$` | schema name
 
-demo.dbs
+#### Token 
+
+```asm
+(?<=\n|^)
+(?:\$[^\n]*)
+(?:\w+)                       ; schema name
+(?:[^\n]*)
+(?:--[^\n]*(?:.*)(?=\n|$))?   ; comment
+(?:\n)
+```
+
+#### demo.dbs
 
 ```
 $ demo
 ```
 
-demo.sql
+#### demo.sql
 
 ```sql
 create DATABASE `demo`
