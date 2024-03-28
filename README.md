@@ -200,7 +200,11 @@ CREATE TABLE `user` (
 )
 ```
 
-## Plus  <a name="plus"></a>
+## Plus
+
+1. Auto Increment
+   - Auto Increment and Primary Key 
+3. Default ... On Update  <a name="plus"></a>
 
 Mark | MySQL
 -|-
