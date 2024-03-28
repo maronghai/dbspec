@@ -70,7 +70,7 @@ Mark | MySQL
 -|-
 `$` | schema name
 
-#### Token 
+#### demo.zz 
 
 ```asm
 (?<=\n|^)
