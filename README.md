@@ -9,7 +9,7 @@ Design Database Schema Without Writing SQL
 1. Schema, Table
 2. Number, String, Datetime
 3. Auto Increment, Primary Key, Default, Comment
-4. Template
+4. [Template](#template)
 
 ## hello world
 
@@ -276,7 +276,7 @@ CREATE TABLE `user` ( -- define a `user` table
 )
 ```
 
-## TEMPLATE
+## TEMPLATE <a name="template"></a>
 
 mark | MySQL
 -|-
