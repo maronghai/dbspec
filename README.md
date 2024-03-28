@@ -6,8 +6,8 @@ Design Database Schema Without Writing SQL
 
 **Features:**
 
-1. [Schema](schema)
-2. [Table](table)
+1. [Schema](#schema)
+2. [Table](#table)
 3. [Types](#types)
    - [Number](#number)
    - [String](#string)
