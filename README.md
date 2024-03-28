@@ -6,12 +6,20 @@ Design Database Schema Without Writing SQL
 
 **Features:**
 
-1. Schema, Table
-2. Number, String, Datetime
-3. Auto Increment, Primary Key, Default, Comment
-4. [Template](#template)
+1. [Schema](schema)
+2. [Table](table)
+3. [Types](#types)
+   - [Number](#number)
+   - [String](#string)
+   - [Datetime](#datetime)
+4. [Default](#default)
+5. [Auto Increment](#auto-increment)
+6. [Primary Key](#primary-key)
+7. [Plus](#plus)
+8. [Comment](#comment)
+9. [Template](#template)
 
-## hello world
+## Hello World
 
 user.dbs
 
@@ -55,7 +63,8 @@ CREATE TABLE `user` (
 )
 ```
 
-## Schema
+
+## Schema <a name="schema"></a>
 
 mark | MySQL
 -|-
@@ -73,7 +82,7 @@ demo.sql
 create DATABASE `demo`
 ```
 
-## Table
+## Table <a name="table"></a>
 
 mark | MySQL
 -|-
@@ -92,16 +101,20 @@ CREATE TABLE `user` (
 )
 ```
 
-## NUMBER
+## Types <a name="types"></a>
 
-mark | MySQL
+Referenced the [Type Spec](typespec) project.
+
+### Number <a name="number"></a>
+
+Mark | Type
 -|-
 `n` | int
 `N` | bigint
-`\d+` | int(\d+)
-`\d*\,\d+` | decimal(\d+, \d+)
 `m` | decimal(16, 2)
 `M` | decimal(20, 6)
+`\d+` | int(\d+)
+`\d*\,\d+` | decimal(\d+, \d+)
 
 user.dbs
 
@@ -131,9 +144,9 @@ CREATE TABLE `user` (
 )
 ```
 
-## STRING
+### String <a name="string"></a>
 
-mark | MySQL
+Mark | Type
 -|-
 | | varchar
 `s\d+` | varchar(\d+)
@@ -160,9 +173,9 @@ CREATE TABLE `user` (
 )
 ```
 
-## DATETIME
+### Datetime <a name="datetime"></a>
 
-mark | MySQL 
+Mark | Type 
 -|-
 `t` | datetime
 
@@ -187,9 +200,9 @@ CREATE TABLE `user` (
 )
 ```
 
-## PLUS
+## Plus  <a name="plus"></a>
 
-mark | MySQL
+Mark | MySQL
 -|-
 `n` `+`, `N` `+`, `\d+` `+` | AUTO_INCREMENT
 `++` | AUTO_INCREMENT PRIMARY KEY
@@ -210,9 +223,9 @@ CREATE TABLE `user` (
 )
 ```
 
-## PRIMARY KEY
+## Primary Key  <a name="primary-key"></a>
 
-mark | MySQL
+Mark | MySQL
 -|-
 `!` | PRIMARY KEY
 
@@ -231,9 +244,9 @@ CREATE TABLE `user` (
 )
 ```
 
-## DEFAULT
+## Default <a name="default"></a>
 
-mark | MySQL
+Mark | MySQL
 -|-
 `=` | DEFAULT
 `t` `=` | DEFAULT CURRENT_TIMESTAMP
@@ -253,9 +266,9 @@ CREATE TABLE `user` (
 )
 ```
 
-## COMMENT
+## Comment <a name="comment"></a>
 
-mark | MySQL
+Mark | MySQL
 -|-
 `//` | table or column `COMMENT`
 `--` | sql comment
@@ -276,9 +289,9 @@ CREATE TABLE `user` ( -- define a `user` table
 )
 ```
 
-## TEMPLATE <a name="template"></a>
+## Template <a name="template"></a>
 
-mark | MySQL
+Mark | MySQL
 -|-
 `%`  | template name. default name is empty.
 `...` | slot. default slot is at the end of the template.
