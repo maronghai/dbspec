@@ -16,40 +16,40 @@ Design Database Schema Without Writing SQL
 user.dbs
 
 ```
-# user // TABLE OF USER  ; define a `user` table with comment 'TABLE OF USER'
+# user  // TABLE OF USER  -- define a `user` table with comment 'TABLE OF USER'
 
-id       n++  ; n++  <=> id n + !
+id       n++   // id of user             -- n++  <=> id n + !
 
-name
-password s100
-avatar   S
+name           // name of user
+password s100  // password of user
+avatar   S     // avatar of user
 
-balance m
-version N =0
-status  1 =0 -- [0,1]
+balance m      // balance of user
+version N =0   // version of record
+status  1 =0   // status of record
 
-delete_at t
-create_at t=
-update_at t+
+delete_at t    // delete time of record
+create_at t=   // create time of record
+update_at t+   // update time of record
 ```
 
 user.sql
 
 ```sql
 CREATE TABLE `user` (
-  `id`        int AUTO_INCREMENT PRIMARY KEY,
+  `id`        int AUTO_INCREMENT PRIMARY KEY COMMENT 'id of user',
 
-  `name`      varchar(255),
-  `password`  varchar(100),
-  `avatar`    text,
+  `name`      varchar(255) COMMENT 'name of user',
+  `password`  varchar(100) COMMENT 'password of user',
+  `avatar`    text COMMENT 'avatar of user',
 
-  `balance`   decimal(16, 2),
-  `version`   bigint DEFAULT 0,
-  `status`    int(1) DEFAULT 0 COMMENT '[0,1]',
+  `balance`   decimal(16, 2) COMMENT 'balance of user',
+  `version`   bigint DEFAULT 0 COMMENT 'version of record',
+  `status`    int(1) DEFAULT 0 COMMENT 'status of record',
 
-  `delete_at` datetime,
-  `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
-  `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `delete_at` datetime COMMENT 'delete time of record',
+  `create_at` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'create time of record',
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'update time of record',
 
   COMMENT = 'TABLE OF USER'
 )
@@ -257,21 +257,21 @@ CREATE TABLE `user` (
 
 mark | MySQL
 -|-
-`//`, `--` | SQL COMMENT
-`;` | spec comment
+`//` | table or column `COMMENT`
+`--` | sql comment
 
 user.dbs
 
 ```
-# user -- TABLE OF USER  ; define a `user` table 
-status 1 =1 // [0,1]     ; define a `status` column, type is int(1), comment is '[0,1]'
+# user  // TABLE OF USER  -- define a `user` table 
+status 1 =1 // [0,1]      -- define a `status` column, type is int(1), comment is '[0,1]'
 ```
 
 user.sql
 
 ```sql
-CREATE TABLE `user` (
-  `status` int(1) DEFAULT 1 COMMENT '[0,1]',
+CREATE TABLE `user` ( -- define a `user` table 
+  `status` int(1) DEFAULT 1 COMMENT '[0,1]', -- define a `status` column, type is int(1), comment is '[0,1]'
   COMMENT = 'TABLE OF USER'
 )
 ```
@@ -289,7 +289,7 @@ template.dbs
 %
 
 id n++
-...           ; Here is a slot
+...           -- Here is a slot
 version   N
 status    1
 
@@ -341,7 +341,7 @@ all.spec
 
 id n++
 
-#1 user  ; define a `user` table using template named `1`
+#1 user  -- define a `user` table using template named `1`
 
 name
 ```
