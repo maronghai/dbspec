@@ -21,7 +21,7 @@ Design Database Schema Without Writing SQL
 
 ## Hello World
 
-user.dbs
+#### user.dbs
 
 ```c
 # user  // TABLE OF USER  -- define a `user` table with comment 'TABLE OF USER'
@@ -41,7 +41,7 @@ create_at t=   // create time of record
 update_at t+   // update time of record
 ```
 
-user.sql
+#### user.sql
 
 ```sql
 CREATE TABLE `user` (
@@ -70,20 +70,20 @@ Mark | MySQL
 -|-
 `$` | schema name
 
-#### demo.zz 
+#### schema.zz 
 
 ```asm
 (?<=\n|^)
 (?:\$[^\n]*)
 (?:\w+)                       ; schema name
 (?:[^\n]*)
-(?:--[^\n]*(?:.*)(?=\n|$))?   ; comment
+(?:--[^\n]*(?:.*)(?=\n|$))?   ; sql comment
 (?:\n)
 ```
 
 #### demo.dbs
 
-```
+```c
 $ demo
 ```
 
@@ -95,17 +95,29 @@ create DATABASE `demo`
 
 ## Table <a name="table"></a>
 
-mark | MySQL
+Mark | MySQL
 -|-
 `#` | table name
 
-user.dbs
+#### table.zz
+
+```asm
+(?<=\n|^)
+(?:\#[^\n]*)
+(?:\w+)                       ; table name
+(?:[^\n]*)
+(?://[^\n]*(?:.*))?           ; table comment
+(?:--[^\n]*(?:.*)(?=\n|$))?   ; sql comment
+(?:\n)
+```
+
+#### user.dbs
 
 ```
 # user
 ```
 
-user.sql
+#### user.sql
 
 ```sql
 CREATE TABLE `user` (
