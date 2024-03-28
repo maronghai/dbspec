@@ -213,6 +213,7 @@ user.dbs
 ```
 # user
 id n ++
+update_at t+
 ```
 
 user.sql
@@ -220,6 +221,7 @@ user.sql
 ```sql
 CREATE TABLE `user` (
   `id` int AUTO_INCREMENT PRIMARY KEY
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 )
 ```
 
