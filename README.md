@@ -13,7 +13,7 @@ Design Database Schema Without Writing SQL
    - [String](#string)
    - [Datetime](#datetime)
 4. [Default](#default)
-5. [Auto Increment](#auto-increment)
+5. [Auto Increment](#plus)
 6. [Primary Key](#primary-key)
 7. [Plus](#plus)
 8. [Comment](#comment)
