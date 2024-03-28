@@ -377,9 +377,9 @@ CREATE TABLE `user` (
 
 ## Ecosystem
 
-1. [Type Spec](typespec)
-2. [DB Create](dbcreate)
-3. [ZZ](zz)
+1. [Type Spec](https://github.com/maronghai/typespec)
+2. [DB Create](https://github.com/maronghai/dbcreate)
+3. [ZZ](https://github.com/maronghai/zz)
 
 ## License
 
