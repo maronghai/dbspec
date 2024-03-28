@@ -8,16 +8,17 @@ Design Database Schema Without Writing SQL
 
 1. [Schema](#schema)
 2. [Table](#table)
-3. [Types](#types)
+3. [Column](#column)
+4. [Types](#types)
    - [Number](#number)
    - [String](#string)
    - [Datetime](#datetime)
-4. [Default](#default)
-5. [Auto Increment](#plus)
-6. [Primary Key](#primary-key)
-7. [Plus](#plus)
-8. [Comment](#comment)
-9. [Template](#template)
+5. [Default](#default)
+6. [Auto Increment](#plus)
+7. [Primary Key](#primary-key)
+8. [Plus](#plus)
+9. [Comment](#comment)
+10. [Template](#template)
 
 ## Hello World
 
@@ -74,10 +75,10 @@ Mark | MySQL
 
 ```asm
 (?<=\n|^)
-(?:\$[^\n]*)
+(?:\$\s*)
 (?:\w+)                       ; schema name
-(?:[^\n]*)
-(?:--[^\n]*(?:.*)(?=\n|$))?   ; sql comment
+(?:\s*)
+(?:--\s*(?:.*)(?=\n|$))?   ; sql comment
 (?:\n)
 ```
 
@@ -103,11 +104,12 @@ Mark | MySQL
 
 ```asm
 (?<=\n|^)
-(?:\#[^\n]*)
+(?:\#)
+\s*
 (?:\w+)                       ; table name
-(?:[^\n]*)
-(?://[^\n]*(?:.*))?           ; table comment
-(?:--[^\n]*(?:.*)(?=\n|$))?   ; sql comment
+\s*
+(?://\s*(?:.*?))?           ; table comment
+(?:--\s*(?:.*)(?=\n|$))?   ; sql comment
 (?:\n)
 ```
 
@@ -122,6 +124,34 @@ Mark | MySQL
 ```sql
 CREATE TABLE `user` (
 )
+```
+
+## Column <a name="column"></a>
+
+#### column.zz
+
+column.ebnf
+
+```c
+name type [default] [modifier*] [comment] [sql_comment]
+\w+ [n|N|m|M|\d+(,\d+)?|s(\d+)?|S|t] [=\w+] [++|+] [!] [//.*?] [--.*] \n
+```
+
+```asm
+(?<=\n)
+(?:\w+)
+\s*
+(?:n|N|m|M|\d+(,\d+)?|s(\d+)?|S|t)   ; tyypes
+\s*
+(?:=\s*\w*)?
+\s*
+(?:[+|++])?
+\s*
+(?:!)?
+\s*
+(?://.*?)
+(?:--.*)
+\n
 ```
 
 ## Types <a name="types"></a>
