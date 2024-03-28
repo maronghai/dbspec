@@ -130,27 +130,21 @@ CREATE TABLE `user` (
 
 #### column.zz
 
-column.ebnf
-
-```c
-name type [default] [modifier*] [comment] [sql_comment]
-\w+ [n|N|m|M|\d+(,\d+)?|s(\d+)?|S|t] [=\w+] [++|+] [!] [//.*?] [--.*] \n
-```
-
 ```asm
 (?<=\n)
-(?:\w+)
+(?:\w+)                              ; name
 \s*
-(?:n|N|m|M|\d+(,\d+)?|s(\d+)?|S|t)   ; tyypes
+(?:n|N|m|M|\d+(,\d+)?|s(\d+)?|S|t)   ; types
 \s*
-(?:=\s*\w*)?
+(?:=\s*\w*)?                         ; default
 \s*
-(?:[+|++])?
+(?:[+|++])?                          ; auto increment, auto increment primary key
 \s*
-(?:!)?
+(?:!)?                               ; primary key
 \s*
-(?://.*?)
-(?:--.*)
+(?://.*?)                            ; table comment
+(?:--.*)                             ; sql comment
+(?:;.*)                              ; spec comment
 \n
 ```
 
