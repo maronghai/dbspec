@@ -150,7 +150,7 @@ CREATE TABLE `user` (
 
 ## Types <a name="types"></a>
 
-Referenced the [Type Spec](typespec) project.
+Referenced the [Type Spec](https://github.com/maronghai/typespec) project.
 
 ### Number <a name="number"></a>
 
