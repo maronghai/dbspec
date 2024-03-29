@@ -32,10 +32,10 @@ The mapping is defined as follows:
 - `#`: corresponds to the `table`.
 - `%`: corresponds to the `template`.
 - `...`: corresponds to the `slot`.
-- `+`: corresponds to `auto increment` or `DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP`.
-- `!`: corresponds to the `primary key`.
-- `++`: corresponds to `auto_increment primary key`.
-- `=`: corresponds to `default`.
+- `+`: corresponds to `AUTO_INCREMENT` or `DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP`.
+- `!`: corresponds to the `PRIMARY KEY`.
+- `++`: corresponds to `AUTO_INCREMENT PRIMARY KEY`.
+- `=`: corresponds to `DEFAULT`.
 
 
 ```asm
@@ -43,9 +43,9 @@ $    ; schema
 #    ; table
 %    ; template
 ...  ; slot
-+    ; auto increment, DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
++    ; AUTO_INCREMENT, DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 !    ; primary key
-++   ; auto_increment primary key
+++   ; AUTO_INCREMENT primary key
 =    ; default
 ```
 
