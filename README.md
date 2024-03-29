@@ -134,7 +134,7 @@ CREATE TABLE `user` (
 (?<=\n)
 (?:\w+)                              ; name
 \s*
-(?:n|N|m|M|\d+(,\d+)?|s(\d+)?|S|t)   ; types
+(?:[nNmMtS]|\d+(?:,\d+)?|s(?:\d+)?)  ; types
 \s*
 (?:=\s*\w*)?                         ; default
 \s*
