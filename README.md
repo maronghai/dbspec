@@ -4,6 +4,10 @@ Database Schema Design and Modeling Tool
 
 Design Database Schema Without Writing SQL
 
+## 1. Introduction
+
+This project provides a mapping between specific symbols and corresponding data definition language (DDL) concepts. This mapping is intended to be used for parsing and converting data in various scenarios, such as databases, data analysis, and programming language parsing.
+
 **Features:**
 
 1. [Schema](#schema)
@@ -20,7 +24,32 @@ Design Database Schema Without Writing SQL
 9. [Comment](#comment)
 10. [Template](#template)
 
-## Hello World
+## 2. Specification
+
+The mapping is defined as follows:
+
+- `$`: corresponds to the `schema`.
+- `#`: corresponds to the `table`.
+- `%`: corresponds to the `template`.
+- `...`: corresponds to the `slot`.
+- `+`: corresponds to `auto increment` or `DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP`.
+- `!`: corresponds to the `primary key`.
+- `++`: corresponds to `auto_increment primary key`.
+- `=`: corresponds to `default`.
+
+
+```asm
+$    ; schema
+#    ; table
+%    ; template
+...  ; slot
++    ; auto increment, DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+!    ; primary key
+++   ; auto_increment primary key
+=    ; default
+```
+
+## 3. Hello World
 
 #### user.dbs
 
@@ -65,7 +94,7 @@ CREATE TABLE `user` (
 ```
 
 
-## Schema <a name="schema"></a>
+## 4. Schema <a name="schema"></a>
 
 Mark | MySQL
 -|-
@@ -76,7 +105,7 @@ Mark | MySQL
 ```asm
 (?<=\n|^)
 (?:\$\s*)
-(?:\w+)                       ; schema name
+(?:\w+)                    ; schema name
 (?:\s*)
 (?:--\s*(?:.*)(?=\n|$))?   ; sql comment
 (?:\n)
@@ -94,7 +123,7 @@ $ demo
 create DATABASE `demo`
 ```
 
-## Table <a name="table"></a>
+## 5. Table <a name="table"></a>
 
 Mark | MySQL
 -|-
@@ -106,9 +135,9 @@ Mark | MySQL
 (?<=\n|^)
 (?:\#)
 \s*
-(?:\w+)                       ; table name
+(?:\w+)                    ; table name
 \s*
-(?://\s*(?:.*?))?           ; table comment
+(?://\s*(?:.*?))?          ; table comment
 (?:--\s*(?:.*)(?=\n|$))?   ; sql comment
 (?:\n)
 ```
@@ -126,7 +155,7 @@ CREATE TABLE `user` (
 )
 ```
 
-## Column <a name="column"></a>
+## 6. Column <a name="column"></a>
 
 #### column.zz
 
@@ -148,11 +177,11 @@ CREATE TABLE `user` (
 \n
 ```
 
-## Types <a name="types"></a>
+## 7. Types <a name="types"></a>
 
 Referenced the [Type Spec](https://github.com/maronghai/typespec) project.
 
-### Number <a name="number"></a>
+### 7.1. Number <a name="number"></a>
 
 Mark | Type
 -|-
@@ -191,7 +220,7 @@ CREATE TABLE `user` (
 )
 ```
 
-### String <a name="string"></a>
+### 7.2. String <a name="string"></a>
 
 Mark | Type
 -|-
@@ -220,7 +249,7 @@ CREATE TABLE `user` (
 )
 ```
 
-### Datetime <a name="datetime"></a>
+### 7.3. Datetime <a name="datetime"></a>
 
 Mark | Type 
 -|-
@@ -247,7 +276,7 @@ CREATE TABLE `user` (
 )
 ```
 
-## Plus
+## 8. Plus
 
 1. Auto Increment
    - Auto Increment and Primary Key 
@@ -276,7 +305,7 @@ CREATE TABLE `user` (
 )
 ```
 
-## Primary Key  <a name="primary-key"></a>
+## 9.  Key  <a name="primary-key"></a>
 
 Mark | MySQL
 -|-
@@ -319,7 +348,7 @@ CREATE TABLE `user` (
 )
 ```
 
-## Comment <a name="comment"></a>
+## 10. Comment <a name="comment"></a>
 
 Mark | MySQL
 -|-
@@ -342,12 +371,14 @@ CREATE TABLE `user` ( -- define a `user` table
 )
 ```
 
-## Template <a name="template"></a>
+## 11. Template <a name="template"></a>
 
 Mark | MySQL
 -|-
 `%`  | template name. default name is empty.
 `...` | slot. default slot is at the end of the template.
+
+#### Default Template
 
 template.dbs
 
@@ -398,7 +429,7 @@ CREATE TABLE `user` (
 )
 ```
 
-### Named Template
+### 11.2 Named Template
 
 all.spec
 
@@ -422,13 +453,13 @@ CREATE TABLE `user` (
 ```
 
 
-## Ecosystem
+## 12. Ecosystem
 
 1. [Type Spec](https://github.com/maronghai/typespec)
 2. [DB Create](https://github.com/maronghai/dbcreate)
 3. [ZZ](https://github.com/maronghai/zz)
 
-## License
+## 13. License
 
 [MIT](https://opensource.org/licenses/MIT)
 
