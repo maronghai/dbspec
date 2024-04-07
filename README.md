@@ -28,16 +28,6 @@ This project provides a mapping between specific symbols and corresponding data 
 
 The mapping is defined as follows:
 
-- `$`: corresponds to the `schema`.
-- `#`: corresponds to the `table`.
-- `%`: corresponds to the `template`.
-- `...`: corresponds to the `slot`.
-- `+`: corresponds to `AUTO_INCREMENT` or `DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP`.
-- `!`: corresponds to the `PRIMARY KEY`.
-- `++`: corresponds to `AUTO_INCREMENT PRIMARY KEY`.
-- `=`: corresponds to `DEFAULT`.
-
-
 ```asm
 $    ; schema
 #    ; table
