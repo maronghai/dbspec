@@ -34,9 +34,9 @@ $    ; schema
 %    ; template
 ...  ; slot
 +    ; AUTO_INCREMENT, DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-!    ; primary key
+!    ; PRIMARY KEY
 ++   ; AUTO_INCREMENT PRIMARY KEY
-=    ; default
+=    ; DEFAULT
 ```
 
 ## 3. Hello World
