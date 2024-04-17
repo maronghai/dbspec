@@ -35,7 +35,7 @@ $    ; schema
 ...  ; slot
 +    ; AUTO_INCREMENT, DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 !    ; primary key
-++   ; AUTO_INCREMENT primary key
+++   ; AUTO_INCREMENT PRIMARY KEY
 =    ; default
 ```
 
