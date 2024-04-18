@@ -244,11 +244,16 @@ CREATE TABLE `user` (
 Mark | Type 
 -|-
 `t` | datetime
+`d` | date
 
 user.dbs
 
 ```
 # user
+
+vip_at       d
+register_at  d =
+login_at     d +
 
 delete_at t
 create_at t=
@@ -276,7 +281,7 @@ Mark | MySQL
 -|-
 `n` `+`, `N` `+`, `\d+` `+` | AUTO_INCREMENT
 `++` | AUTO_INCREMENT PRIMARY KEY
-`t` `+` | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+`t` `+`, `d` `+` | DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 user.dbs
 
