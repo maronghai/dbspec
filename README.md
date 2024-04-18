@@ -44,21 +44,21 @@ $    ; schema
 #### user.dbs
 
 ```c
-# user  // TABLE OF USER  -- define a `user` table with comment 'TABLE OF USER'
+# user  / TABLE OF USER  -- define a `user` table with comment 'TABLE OF USER'
 
-id       n++   // id of user
+id       n++   / id of user
 
-name           // name of user
-password s100  // password of user
-avatar   S     // avatar of user
+name           / name of user
+password s100  / password of user
+avatar   S     / avatar of user
 
-balance m      // balance of user
-version N =0   // version of record
-status  1 =0   // status of record
+balance m      / balance of user
+version N =0   / version of record
+status  1 =0   / status of record
 
-delete_at t    // delete time of record
-create_at t=   // create time of record
-update_at t+   // update time of record
+delete_at t    / delete time of record
+create_at t=   / create time of record
+update_at t+   / update time of record
 ```
 
 #### user.sql
