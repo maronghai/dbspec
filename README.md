@@ -326,7 +326,7 @@ CREATE TABLE `user` (
 Mark | MySQL
 -|-
 `=` | DEFAULT
-`t` `=` | DEFAULT CURRENT_TIMESTAMP
+`t` `=`, `d` `=`, | DEFAULT CURRENT_TIMESTAMP
 
 user.dbs
 
