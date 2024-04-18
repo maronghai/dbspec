@@ -342,8 +342,10 @@ CREATE TABLE `user` (
 
 Mark | MySQL
 -|-
-`//` | table or column `COMMENT`
+`/` | table or column `COMMENT`
+`;` | spec comment
 `--` | sql comment
+
 
 user.dbs
 
